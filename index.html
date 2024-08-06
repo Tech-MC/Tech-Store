@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH MC</title>
+    <link rel="icon" href="icon.png" type="icon.png">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .download-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        .download-button img {
+            margin-right: 10px;
+            height: 20px; /* Adjust icon size */
+            width: 20px; /* Adjust icon size */
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button class="download-button" onclick="downloadFile('Tech-Xray.zip'>
+        <img src="icon.png" alt="Download Icon">
+        XRAY Java Edition
+    </button>
+    <button class="download-button" onclick="downloadFile('path/to/your/file2.exe', 'file2.exe')">
+        <img src="path/to/your/icon2.png" alt="Download Icon">
+        Download File 2
+    </button>
+    <button class="download-button" onclick="downloadFile('path/to/your/file3.exe', 'file3.exe')">
+        <img src="path/to/your/icon3.png" alt="Download Icon">
+        Download File 3
+    </button>
+
+    <script>
+        function downloadFile(url, filename) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename; // Customize the file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
